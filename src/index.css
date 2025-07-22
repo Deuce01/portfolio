@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .prose-custom {
+    @apply max-w-none text-gray-900 dark:text-gray-100;
+  }
+  
+  .prose-custom h1 {
+    @apply text-3xl font-bold mb-4 text-gray-900 dark:text-white;
+  }
+  
+  .prose-custom h2 {
+    @apply text-2xl font-semibold mb-3 text-gray-900 dark:text-white;
+  }
+  
+  .prose-custom h3 {
+    @apply text-xl font-semibold mb-2 text-gray-900 dark:text-white;
+  }
+  
+  .prose-custom p {
+    @apply mb-4 leading-relaxed text-gray-700 dark:text-gray-300;
+  }
+  
+  .prose-custom ul, .prose-custom ol {
+    @apply mb-4 pl-6;
+  }
+  
+  .prose-custom li {
+    @apply mb-2 text-gray-700 dark:text-gray-300;
+  }
+  
+  .prose-custom code {
+    @apply bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-sm text-blue-600 dark:text-blue-400;
+  }
+  
+  .prose-custom pre {
+    @apply bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto mb-4;
+  }
+  
+  .prose-custom pre code {
+    @apply bg-transparent p-0 text-gray-800 dark:text-gray-200;
+  }
+  
+  .prose-custom blockquote {
+    @apply border-l-4 border-blue-500 pl-4 italic text-gray-600 dark:text-gray-400 mb-4;
+  }
+  
+  .prose-custom a {
+    @apply text-blue-600 dark:text-blue-400 hover:underline;
+  }
+}
