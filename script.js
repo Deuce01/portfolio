@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let progress = 0;
 
     const preloaderInterval = setInterval(() => {
-        progress += Math.random() * 15 + 5;
+        progress += Math.random() * 25 + 15;
         if (progress > 100) progress = 100;
         progressBar.style.width = progress + '%';
         if (progress >= 100) {
@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 preloader.classList.add('loaded');
                 document.body.style.overflow = '';
-            }, 400);
+            }, 300);
         }
-    }, 200);
+    }, 120);
 
     // Prevent scroll during preload
     document.body.style.overflow = 'hidden';
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createParticles() {
         particles = [];
-        const count = Math.floor((canvas.width * canvas.height) / 18000);
+        const count = Math.min(Math.floor((canvas.width * canvas.height) / 25000), 60);
         for (let i = 0; i < count; i++) {
             particles.push({
                 x: Math.random() * canvas.width,
